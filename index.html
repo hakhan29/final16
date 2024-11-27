@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection with Music</title>
+    <script defer src="./face-api.min.js"></script>
+    <script defer src="./script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        #colorBox {
+            width: 200px;
+            height: 100px;
+            margin-bottom: 20px;
+            transition: background 0.5s ease-in-out;
+        }
+
+        #expression {
+            font-size: 24px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" width="720" height="560" autoplay muted></video>
+    <div id="colorBox"></div>
+    <div id="expression"></div>
+    <button id="startBtn">Start Music Detection</button>
+</body>
+</html>
